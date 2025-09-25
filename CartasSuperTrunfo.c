@@ -15,6 +15,8 @@ int populacao1;
 float area1;
 float pib1;
 int ponturistico1;
+float densipo1;
+float pibpercap1;
 
 //variaveis da segunda carta
 
@@ -25,6 +27,8 @@ int populacao2;
 float area2;
 float pib2;
 int ponturistico2;
+float densipo2;
+float pibpercap2;
   // Área para entrada de dados
   //incio do code da primeira carta
 
@@ -37,7 +41,7 @@ scanf("%s", carta1);
 printf("Digite o nome da cidade: \n");
 scanf("%s", cidade1);
 
-printf("Digite a população da cidade: ");
+printf("Digite a população da cidade: \n");
 scanf("%d", &populacao1);
 
 printf("Digite a area da cidade: \n");
@@ -48,6 +52,11 @@ scanf("%f", &pib1);
 
 printf("Número de Pontos Turísticos: \n");
 scanf("%d", &ponturistico1);
+
+
+  densipo1 = (float) populacao1 / area1;
+  pibpercap1 = (pib1 * 1000000000) / (float) populacao1; //pib está em bilhões, então multiplica por 1 bilhão
+
 
 //incio do code da segunda carta
 
@@ -62,7 +71,7 @@ scanf("%s", carta2);
 printf("Digite o nome da cidade: \n");
 scanf("%s", cidade2);
 
-printf("Digite a população da cidade: ");
+printf("Digite a população da cidade: \n");
 scanf("%d", &populacao2);
 
 printf("Digite a area da cidade: \n");
@@ -73,6 +82,9 @@ scanf("%f", &pib2);
 
 printf("Número de Pontos Turísticos: \n");
 scanf("%d", &ponturistico2);
+
+densipo2 = (float) populacao2 / area2;
+pibpercap2 = (pib2 * 1000000000) / (float) populacao2; //pib está em bilhões, então multiplica por 1 bilhão
 
   // Área para exibição dos dados da cidade
 
@@ -86,7 +98,8 @@ printf("População: %d \n", populacao1);
 printf("Área: %.2f km² \n", area1);
 printf("PIB: %.2f Bilhões de reais \n", pib1);
 printf("Número de pontos turisticos: %d \n", ponturistico1);
-
+printf("Densidade populacional: %.2f \n", densipo1);
+printf("PIB per capita: %.2f \n", pibpercap1);
 //carta A02
 printf("*****Carta A02*****\n");
 printf("Estado: %s \n", estado2);
@@ -96,7 +109,8 @@ printf("População: %d \n", populacao2);
 printf("Área: %.2f km² \n", area2);
 printf("PIB: %.2f Bilhões de reais \n", pib2);
 printf("Número de pontos turisticos: %d \n", ponturistico2);
-
+printf("Densidade populacional: %.2f \n", densipo2);
+printf("PIB per capita: %.2f \n", pibpercap2);
 
 return 0;
 } 
