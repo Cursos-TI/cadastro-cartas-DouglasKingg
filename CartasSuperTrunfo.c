@@ -79,7 +79,9 @@ char estado2[30], carta2[10], cidade2[50];
      // Cálculos - Carta 2
     densipo2 = (float) populacao2 / area2;
     pibpercap2 = (pib2 * 1000000000) / (float) populacao2;
-    superpoder2 = (float) populacao2 + area2 + (pib2 * 1000000000) + ponturistico2 + pibpercap2 + (1.0f / densipo2);
+    superpoder2 = (float) populacao2 + area2 + (pib2 * 1000000000) + ponturistico2 + pibpercap2 + (1.0f / densipo2);/*
+    Precisei pesquisar sobre o 1.0f
+    testei bastante em outra aba de código, enfim deu certo :)*/
 
   // Área para exibição dos dados da cidade
 
